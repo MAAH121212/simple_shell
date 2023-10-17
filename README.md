@@ -1,4 +1,4 @@
-#simple shell project
+# Simple shell project
 On this project we tried to emulate a real shell and handle most of its operation
 
 It works by passing arguments through CLI or in an interactive mode.
