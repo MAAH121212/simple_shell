@@ -52,11 +52,10 @@ int found(char **args, char *path, char *fullPath)
  * main - stat example
  * @ac: number of args
  * @av: args
- * @env: envs
  * Return: Always 0.
  */
 
-int main(int ac, char **av, char **env)
+int main(int ac, char **av)
 {
 	size_t len = 0;
 	char *line = NULL, *path = NULL, *fullPath;
@@ -86,7 +85,7 @@ int main(int ac, char **av, char **env)
 		args[0] = fullPath, frk = fork();
 		if (frk == 0)
 		{
-			execve(args[0], args, env);
+			execve(args[0], args, environ);
 			perror("./shell");
 			free_all(args, fullPath, path);
 			_exit(EXIT_FAILURE);
