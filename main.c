@@ -18,7 +18,7 @@ int builtins(char **args, char *path, char *line)
 			free_args(args);
 			free(path);
 			free(line);
-			exit(EXIT_SUCCESS);
+			_exit(EXIT_SUCCESS);
 		}
 		free_args(args);
 		free(path);
