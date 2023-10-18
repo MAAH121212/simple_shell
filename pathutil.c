@@ -39,7 +39,7 @@ char *pathcat(char *s1, char *s2)
 
 char *findInPATH(char *path, char *file)
 {
-	char *token;
+	char *token, *cwd;
 	int found;
 
 	found = access(file, F_OK);
@@ -48,7 +48,7 @@ char *findInPATH(char *path, char *file)
 		return (_strdup(file));
 	}
 
-	char *cwd = malloc(1024);
+	cwd = malloc(1024);
 
 	getcwd(cwd, 1024);
 	token = strtok(path + 5, ":");

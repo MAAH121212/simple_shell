@@ -8,11 +8,11 @@
 
 int main(int ac, char **av, char **env)
 {
-    ssize_t lineSize = 0; size_t len = 0;
+    size_t len = 0;
     char *line = NULL, *path = NULL, *fullPath;
     char **args = NULL; int frk, status;
     
-    while(1)
+    while(ac || !ac || av || !av)
     {   
         if (isatty(STDIN_FILENO))
             print_string("#cisfun$ ");
