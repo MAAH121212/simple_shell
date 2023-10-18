@@ -6,7 +6,6 @@
  * Return: Always 0 (Success)
  */
 
-extern char **environ;
 int exit_shell(void)
 {
 	return (2);

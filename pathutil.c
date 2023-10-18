@@ -94,8 +94,6 @@ void free_args(char **s)
  * Return: Always 0 (Success)
  */
 
-extern char **environ;
-
 char *_getenv(const char *name)
 {
 	int i, j, flag;

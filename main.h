@@ -10,6 +10,7 @@
 #include <signal.h>
 #include <string.h>
 
+extern char **environ;
 char *findInPATH(char *path, char *file);
 char *_strcat(char *dest, char *src);
 char *_getenv(const char *name);
