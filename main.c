@@ -76,9 +76,10 @@ int main(int ac, char **av)
 		if (!(_strlen(line) - 1))
 			continue;
 		path = _strdup(_getenv("PATH")), line[_strlen(line) - 1] = '\0';
-		args = strtow(line), fullPath = findInPATH(path, args[0]);
+		args = strtow(line);
 		if (builtins(args, path, line))
 			continue;
+		fullPath = findInPATH(path, args[0]);
 		if (!found(args, path, fullPath))
 			continue;
 		free(args[0]);
