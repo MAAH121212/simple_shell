@@ -57,3 +57,23 @@ int (*get_op_func(char *s))()
 	return (NULL);
 }
 
+/**
+ * free_all - Entry point
+ * @ar1: array
+ * @path: string
+ * @fullPath: string
+ * Description: 'fill the first n bytes of s with b'
+ * Return: Always 0 (Success)
+ */
+
+int free_all(char **ar1, char *path, char *fullPath)
+{
+	free_args(ar1);
+	if (path != NULL)
+		free(path);
+	if (fullPath != NULL)
+		free(fullPath);
+
+	return (0);
+}
+

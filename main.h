@@ -11,6 +11,7 @@
 #include <string.h>
 
 extern char **environ;
+int free_all(char **ar1, char *path, char *fullPath);
 char *findInPATH(char *path, char *file);
 char *_strcat(char *dest, char *src);
 char *_getenv(const char *name);
